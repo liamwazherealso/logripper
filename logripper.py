@@ -19,6 +19,7 @@ logga = logging.getLogger("__name__")
 while True:
     for i in count():
         logga.info("Up up up! %s", i)
-        if i > 1_000_000:
+        time.sleep(0.001)
+        if i >= 1_000_000:
             break
     time.sleep(3600)
