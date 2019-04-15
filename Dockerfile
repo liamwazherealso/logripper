@@ -1,3 +1,4 @@
-FROM python:3.7
+FROM python:3.6
 COPY . .
-CMD ["python", "./logripper.py"]
+RUN pip install pipenv && pipenv install
+CMD ["pipenv", "run", "python", "./logripper.py"]

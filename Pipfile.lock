@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "167ddfe7370e7f516cc9fd390304c750eac26a461b2d1f002e95f338aed728e6"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "logstash-formatter": {
+            "hashes": [
+                "sha256:163f5ef62df5459f1d36dcb54e9c3f8f0c90157a324a3361887532b615bf4fb9"
+            ],
+            "index": "pypi",
+            "version": "==0.5.17"
+        }
+    },
+    "develop": {}
+}

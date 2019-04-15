@@ -1,9 +1,19 @@
+import os
+import sys
 import time
 import logging
+from logstash_formatter import LogstashFormatterV1
 from itertools import count
 
+if any("KUBERNETES" in k for k in os.environ):
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(LogstashFormatterV1())
+    logging.root.setLevel("INFO")
+    logging.root.addHandler(handler)
+else:
+    logging.basicConfig(level=logging.INFO)
+
 logga = logging.getLogger("__name__")
-logging.basicConfig(level=logging.INFO)
 
 
 while True:
