@@ -1,5 +1,5 @@
 FROM python:3.6
-RUN adduser logripper root
+RUN adduser -g root logripper
 RUN chmod -R 775 /home/logripper/app
 RUN chown -R logripper:root /home/logripper/app
 USER 1000
