@@ -21,7 +21,7 @@ while True:
     for i in count():
         logga.info("Up up up! %s", i)
         if i % 1000 == 0:
-            time.sleep(random.random() / 100)
+            time.sleep(random.random())
         if i >= 1_000_000:
             break
     time.sleep(3600)
