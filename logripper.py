@@ -1,4 +1,5 @@
 import os
+import random
 import sys
 import time
 import logging
@@ -19,7 +20,8 @@ logga = logging.getLogger("__name__")
 while True:
     for i in count():
         logga.info("Up up up! %s", i)
-        time.sleep(0.001)
+        if i % 1000 == 0:
+            time.sleep(random.random() / 100)
         if i >= 1_000_000:
             break
     time.sleep(3600)
