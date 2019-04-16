@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: logripper
+spec:
+  parallelism: 1
+  completions: 1
+  template:
+    metadata:
+      name: logripper
+    spec:
+      containers:
+      - name: logripper
+        image: quay.io/liamwazherealso/logripper
+        env:
+          - name: LOG_LIMIT
+            value: "50_000"
+      restartPolicy: OnFailure
