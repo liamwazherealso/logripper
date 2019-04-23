@@ -30,7 +30,8 @@ LIMIT = int(os.environ.get('LOG_LIMIT'))
 logga.info("Logripper run of {} logs.".format(LIMIT))
 h = ''.join(random.choice(chars) for x in range(8))
 for i in range(LIMIT):
-    logga.info("TEST LOG %s", h)
+    lid = ''.join(random.choice(chars) for x in range(8))
+    logga.info("TEST LOG %s - %s", h, lid)
     if i % 1000 == 0:
         time.sleep(random.random())
 
